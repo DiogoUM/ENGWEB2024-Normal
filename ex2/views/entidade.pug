@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    .w3-card-4
+        header.w3-container.w3-blue
+            h1 Entidade: #{entidade} [#[a(href="/") Página principal]]
+            h4 Número de registos desta entidade: #{n_registos}
+
+        .w3-container
+            .w3-container.w3-margin-top.w3-margin-bottom
+                table.w3-table-all
+                    tr
+                        th.w3-blue(style="width: 400px") Entidade
+                        td= entidade
+                    tr
+                        th.w3-blue(style="width: 400px") NIPC da Entidade
+                        td= NIPC_entidade
+
+                each contrato in contratos
+                    tr
+                        td
+                            a(href="/" + contrato._id)= contrato._id
+                        td= contrato.objectoContrato
+                        td= contrato.dataCelebracaoContrato
+                        td= contrato.precoContratual
+                        td
+                            a(href= "/contratos/" + contrato.NIPC_entidade_comunicante)= contrato.NIPC_entidade_comunicante
+                        td= contrato.entidade_comunicante
+
+
+        footer.w3-container.w3-blue.w3-center
+            h5 Diogo Ferreira - A94877 - LEI
