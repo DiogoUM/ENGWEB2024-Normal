@@ -2,17 +2,17 @@
 
 ## 1.1 Setup
 Alteração do nome dos campos do dataset:
-    idcontrato -> _id
-    nAnuncio --
-    tipoprocedimento -> procedimento
-    objectoContrato --
-    dataPublicacao --
-    dataCelebracaoContrato --
-    precoContratual --
-    prazoExecucao --
-    NIPC_entidade_comunicante --
-    entidade_comunicante --
-    fundamentacao --
+- idcontrato -> _id
+- nAnuncio --
+- tipoprocedimento -> procedimento
+- objectoContrato --
+- dataPublicacao --
+- dataCelebracaoContrato --
+- precoContratual --
+- prazoExecucao --
+- NIPC_entidade_comunicante --
+- entidade_comunicante --
+- fundamentacao --
 
 Comando para importar para o mongodb:
 mongoimport -d contratos -c contratos --type csv --headerline --file contratos.csv
